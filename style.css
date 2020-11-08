@@ -1,4 +1,6 @@
 body{
+    width: 100%;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     background-color: #15202B;
@@ -11,19 +13,26 @@ body{
 .content{
     display: flex;
     flex-direction: row;
+    /* align-content: center; */
 }
 .colm1 {
-    width: 332px;
+    width: 20%;
     height: 100%;
 
 }
 .colm2{
-    width: 598px;
-    height: auto;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.colm3 {
+    width: 30%;
+    height: 100%;
 
 }
 .navbar{
-
     height: 33px;
     font-size: 19px;
     font-weight: bolder;
@@ -34,8 +43,10 @@ body{
     padding-top: 15px;
 }
 .newsfeed{
-height: auto;
+    display: flex;
+    flex-direction: column;
 }
+
 .search-box {
     display: flex;
     border-radius: 40px;
@@ -51,8 +62,6 @@ height: auto;
     color: rgb(136, 153, 166);
     height: 40px;
     width: 40px;
-    display: flex;
-    justify-content: center;
   }
 
   .search-txt{
@@ -69,7 +78,60 @@ height: auto;
   }
   .twitter-icon{
     padding-left: 70px;
-    margin-top: 50px;
+    margin-top: 70px;
     font-size: 1.5rem; 
     color: white;
   }
+  #twitterText{
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 20px;
+      margin: 20px;
+  }
+  #tweetButton{
+      width: 70px;
+      height: 37px;
+      background: rgb(56, 129, 202);
+      border-radius: 50px;
+      color: white;
+      font-size: 15px;
+      font-family: 'Oxygen', sans-serif;
+      box-shadow: none;
+      margin: 0px 20px;
+
+  }
+  .toolBar{
+    display: flex;
+    justify-content: flex-end;
+  }
+  #twitterText::-webkit-input-placeholder{
+      font-size: 20px;
+      font-family: 'Oxygen', sans-serif;
+
+  }
+  #userName{
+      font-size: 15px;
+      color: #FFFFFF;
+      margin: 10px;
+      background: none;
+      outline: none;
+  }
+  .likeButton{
+      background-color: #f55064;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: heart-beat 1s linear infinite alternate;
+  }
+
+@keyframes heart-beat
+{
+    25%
+    {
+        transform: scale(1.1);
+    }
+}

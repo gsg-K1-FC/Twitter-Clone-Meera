@@ -7,8 +7,6 @@
         <script src="https://kit.fontawesome.com/34321f5008.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
-        <script src="script.js" ></script>
-
     </head>
     <body>
         <div class="content">
@@ -21,19 +19,38 @@
             </div>
             <div class="colm2">
                 <div class ="navbar borderStyle">Home</div>
-                <div class="newsfeed borderStyle"></div>
+                
+                <div class="newsfeed borderStyle">
+                    <input type="text" id="userName" value="Meera Qunaibe"/>
+                    <textarea
+                     name="twitteText"
+                    id="twitterText"
+                    placeholder="What's happening?"
+                    cols="60"
+                    rows="2"
+                    ></textarea>
+                    <div class="toolBar">
+                        <button id="tweetButton">Tweet</button>
+                    </div>
+                    <!-- <div class="likeButton">
+                        <i id="heart" class="fas fa-heart"></i>
+                    </div> -->
+                    <div id="tweetList">
+                        <ul id="List">
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="colm3">
                 <div class="search-box" >
                     <a class="search-button" href="#">
                         <i class="fas fa-search"></i>
                     </a>
-                    <input class="search-txt" type="text" placeholder="Search Twitter">
+                    <input class="search-txt" type="text" placeholder="Search Twitter"/>
                 </div>
 
             </div>
         </div>
     </body>
-
-
+    <script src="script.js" ></script>
 </html>
