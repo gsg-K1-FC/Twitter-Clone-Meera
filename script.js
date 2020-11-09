@@ -1,7 +1,6 @@
 var firebaseURL = 'https://[YOUR-FIREBASE-NAME-HERE].firebaseio.com/like-button/';
 let storedtweets = JSON.parse(localStorage.getItem("tweets"));
-// let storedUserName = localStorage.getItem("userName");
-let heat = localStorage.getItem("emojy");
+// let storedlikes = localStorage.getItem("like");
 let tweets = storedtweets ? storedtweets : [];
 let list = document.getElementById("List");
 createTweet();
@@ -23,15 +22,25 @@ function createTweet(){
         tweetContent.textContent = arr.tweet;
         let user = document.createElement("h3");
         user.textContent = userName;
-        // let emojy = document.createElement("div");
-        // let like = document.getElementById("heart");
-        // emojy.textContent = like;
+        let btn = document.createElement('button');
+        btn.innerText = '♡';
+        btn.className='heartBtn';
+        // let x = document.createElement("INPUT");
+        // x.setAttribute("type", "text");
+        // x.className = 'show';
+        // like = document.getElementsByClassName('show').value = 0;
         list.appendChild(user);
         list.appendChild(tweetContent);
+        list.appendChild(btn);
+        // list.appendChild(x);
         document.getElementById("List").style.color = "white";
+        // document.getElementsByClassName('heartBtn').addEventListener('click',function(){
+        //     like = like + 1;
+        // })
     })
     localStorage.setItem("tweets", JSON.stringify(tweets));
     localStorage.setItem("userName", userName);
-    // localStorage.setItem("emojy", emojy);
+    // localStorage.setItem("like", JSON.stringify(like));
 }
+
 
